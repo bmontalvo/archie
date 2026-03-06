@@ -1,3 +1,4 @@
+using Archie.Core.Ingestion;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Archie.Infrastructure.DocumentParsing;
@@ -7,5 +8,9 @@ namespace Archie.Infrastructure.DocumentParsing;
 /// </summary>
 public static class DocumentParsingServiceExtensions
 {
-    // TODO: AddDocumentParsing(this IServiceCollection services)
+    public static IServiceCollection AddDocumentParsing(this IServiceCollection services)
+    {
+        services.AddSingleton<IDocumentChunker, MarkdownDocumentChunker>();
+        return services;
+    }
 }
