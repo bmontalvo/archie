@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Archie.Api/Archie.Api.csproj" />
+    <Project Path="src/Archie.Core/Archie.Core.csproj" />
+    <Project Path="src/Archie.Eval/Archie.Eval.csproj" />
+    <Project Path="src/Archie.Infrastructure/Archie.Infrastructure.csproj" />
+    <Project Path="src/Archie.Tests/Archie.Tests.csproj" />
+  </Folder>
+</Solution>
