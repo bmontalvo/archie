@@ -6,6 +6,11 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddKernel();
 
 // TODO: Register Archie.Core services (IQueryPlanner, IRetriever, IContextEvaluator, ISynthesisEngine)
+builder.Services.AddOptions<AzureOpenAIOptions>()
+    .BindConfiguration("AzureOpenAI")
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
+    
 // TODO: Register Archie.Infrastructure implementations (Azure OpenAI, Azure AI Search)
 
 WebApplication app = builder.Build();
