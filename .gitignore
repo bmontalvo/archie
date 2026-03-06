@@ -1,0 +1,16 @@
+# Build outputs
+bin/
+obj/
+
+# User secrets and local config
+appsettings.Local.json
+
+# .NET tools
+.vs/
+*.user
+
+# Rider
+.idea/
+
+# Personal documents — not tracked
+docs/

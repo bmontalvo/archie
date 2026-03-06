@@ -1,0 +1,38 @@
+# Archie API — manual test requests
+# Requires the REST Client extension (humao.rest-client) or VS Code's built-in HTTP support.
+# Edit @baseUrl and @docsDir to match your local setup, then click "Send Request" above any request.
+
+@baseUrl = http://localhost:5000
+@docsDir = c:/path/to/your/docs
+
+### Ingest all markdown files in docs/
+POST {{baseUrl}}/api/ingest
+Content-Type: application/json
+
+{
+  "directory": "{{docsDir}}"
+}
+
+### Query — certifications
+POST {{baseUrl}}/api/query
+Content-Type: application/json
+
+{
+  "question": "What certifications should I pursue?"
+}
+
+### Query — career path
+POST {{baseUrl}}/api/query
+Content-Type: application/json
+
+{
+  "question": "What should my career focus be over the next 5 years?"
+}
+
+### Query — skills to develop
+POST {{baseUrl}}/api/query
+Content-Type: application/json
+
+{
+  "question": "What technical skills should I prioritize developing?"
+}
